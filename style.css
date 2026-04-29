@@ -211,10 +211,20 @@ p {
 }
 
 /* STRUCTURE */
+.structure .container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
 .structure img {
-  width: 100%;
+  width: 50%;
   border-radius: 12px;
-  margin: 20px 0;
+  object-fit: cover;
+}
+
+.structure h3 {
+  flex: 1;
 }
 
 /* MAP */
