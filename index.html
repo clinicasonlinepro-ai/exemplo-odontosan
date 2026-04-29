@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Odontológica</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+
+      <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- BOTÃO FIXO -->
+  <a href="https://wa.me/5545991456894" class="cta-float">Falar com a clínica</a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/images/servico.png" class="hero-bg" alt="">
+    <div class="container hero-content">
+      <h1>Volte a sorrir com segurança</h1>
+      <p>Tratamentos personalizados para você se sentir confiante novamente</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5545991456894" class="btn primary">Quero avaliar meu caso</a>
+        <a href="https://wa.me/5545991456894" class="btn secondary">Falar com a clínica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services">
+    <div class="container">
+      <h2>Tratamentos</h2>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <img src="assets/images/apos.consulta.png">
+          <h3>Implantes</h3>
+          <p>Recupere dentes perdidos com segurança</p>
+          <a href="https://wa.me/5545991456894" class="btn primary">Quero voltar a sorrir</a>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/images/mulher.sorrindo.png">
+          <h3>Estética</h3>
+          <p>Melhore seu sorriso de forma natural</p>
+          <a href="https://wa.me/5545991456894" class="btn primary">Quero melhorar meu sorriso</a>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/images/aparelho.invisivel.png">
+          <h3>Alinhadores</h3>
+          <p>Corrija seus dentes com discrição</p>
+          <a href="https://wa.me/5545991456894" class="btn primary">Quero alinhar meus dentes</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ATENDIMENTO -->
+  <section class="care">
+    <div class="container care-content">
+      <img src="assets/images/conversa.png">
+      <div>
+        <h2>Atendimento humanizado</h2>
+        <p>Você entende cada etapa antes de decidir</p>
+        <a href="https://wa.me/5545991456894" class="btn secondary">Falar com a clínica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLÍNICA -->
+  <section class="structure">
+    <div class="container">
+      <h2>Estrutura preparada para você</h2>
+      <img src="assets/images/consultorio.png">
+      <p>Ambiente confortável e seguro</p>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="location">
+    <div class="container">
+      <h2>Onde estamos</h2>
+
+      <iframe 
+        src="https://www.google.com/maps?q=Toledo,Parana,Brazil&output=embed"
+        width="100%" height="300" style="border:0;">
+      </iframe>
+
+      <div class="location-actions">
+        <a href="#" onclick="abrirMaps()" class="btn secondary">Ver avaliações</a>
+        <a href="https://wa.me/5545991456894" class="btn primary">Falar com a clínica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Você não precisa continuar adiando isso</h2>
+      <a href="https://wa.me/5545991456894" class="btn primary">Agendar minha avaliação</a>
+    </div>
+  </section>
+
+  <!-- JS (AGORA NO LUGAR CERTO) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
