@@ -3,20 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const hamburger = document.getElementById("hamburger");
 
-  // 🔴 proteção contra erro silencioso
+  // proteção
   if (!menu || !hamburger) {
     console.error("Menu ou hamburger não encontrado");
     return;
   }
 
-  // ✅ toggle menu
+  // ✅ abrir/fechar menu
   hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
   });
 
-  // ✅ fechar menu ao clicar em link
+  // ✅ scroll suave + fechar menu
   document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function (e) {
+
+      const targetId = this.getAttribute("href");
+
+      // só aplica scroll suave em links internos
+      if (targetId.startsWith("#")) {
+        e.preventDefault();
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      }
+
+      // fecha menu no mobile
       menu.classList.remove("active");
     });
   });
@@ -34,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.abrirMaps = abrirMaps;
 
-  // ✅ animação de sections
+  // ✅ animação das sections
   const sections = document.querySelectorAll("section");
 
   const observer = new IntersectionObserver((entries) => {
