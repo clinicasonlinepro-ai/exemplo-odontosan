@@ -60,18 +60,35 @@ body {
   color: #0ea5e9;
 }
 
-/* HAMBURGUER (ESTILIZADO) */
+/* BOTÃO CONTATO MENU */
+.menu .cta-menu {
+  border: 2px solid #0ea5e9;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #0ea5e9;
+  font-weight: 500;
+}
+
+.menu .cta-menu:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* HAMBURGUER */
 .hamburger {
   display: none;
   font-size: 26px;
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 8px 12px;
   border-radius: 8px;
-  transition: 0.3s;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
 }
 
 .hamburger:hover {
-  background: #f1f5f9;
+  background: #0ea5e9;
+  color: white;
+  border-color: #0ea5e9;
 }
 
 /* HERO */
@@ -108,14 +125,23 @@ body {
   font-size: 16px;
 }
 
-/* BOTÕES */
+/* BOTÕES PREMIUM */
 .btn {
   display: inline-block;
   padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 14px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid #0ea5e9;
+  color: #0ea5e9;
+  background: transparent;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+  color: white;
+  transform: translateY(-2px);
 }
 
 .primary {
@@ -124,17 +150,11 @@ body {
 }
 
 .primary:hover {
-  opacity: 0.85;
+  background: #0284c7;
 }
 
 .secondary {
   background: transparent;
-  border: 1px solid #ddd;
-  color: #333;
-}
-
-.secondary:hover {
-  background: #f5f5f5;
 }
 
 /* BOTÃO FIXO */
@@ -259,7 +279,6 @@ p {
 /* RESPONSIVO */
 @media (max-width: 768px) {
 
-  /* MENU MOBILE (MELHORADO) */
   .menu {
     position: absolute;
     top: 60px;
@@ -303,7 +322,6 @@ p {
     width: 100%;
   }
 
-  /* 🔥 CORREÇÃO DO BUG */
   .structure .container {
     flex-direction: column;
   }
