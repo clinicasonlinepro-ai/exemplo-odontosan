@@ -36,7 +36,7 @@ body {
   padding: 15px 0;
 }
 
-/* LOGO (CORRIGIDO) */
+/* LOGO */
 .logo {
   height: 45px;
   width: auto;
@@ -53,13 +53,25 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 14px;
+  transition: 0.3s;
 }
 
-/* HAMBURGUER */
+.menu a:hover {
+  color: #0ea5e9;
+}
+
+/* HAMBURGUER (ESTILIZADO) */
 .hamburger {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  background: #f1f5f9;
 }
 
 /* HERO */
@@ -247,20 +259,32 @@ p {
 /* RESPONSIVO */
 @media (max-width: 768px) {
 
-  /* MENU MOBILE */
+  /* MENU MOBILE (MELHORADO) */
   .menu {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 10px;
     background: white;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     display: none;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid #eee;
   }
 
   .menu.active {
     display: flex;
+  }
+
+  .menu a {
+    padding: 10px 5px;
+    border-radius: 6px;
+  }
+
+  .menu a:hover {
+    background: #f5f5f5;
   }
 
   .hamburger {
@@ -276,6 +300,15 @@ p {
   }
 
   .care img {
+    width: 100%;
+  }
+
+  /* 🔥 CORREÇÃO DO BUG */
+  .structure .container {
+    flex-direction: column;
+  }
+
+  .structure img {
     width: 100%;
   }
 
