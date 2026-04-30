@@ -3,12 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const hamburger = document.getElementById("hamburger");
 
-  function toggleMenu() {
-    menu.classList.toggle("active");
+  // 🔴 proteção contra erro silencioso
+  if (!menu || !hamburger) {
+    console.error("Menu ou hamburger não encontrado");
+    return;
   }
 
-  hamburger.addEventListener("click", toggleMenu);
+  // ✅ toggle menu
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
 
+  // ✅ fechar menu ao clicar em link
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  });
+
+  // ✅ botão maps
   function abrirMaps() {
     const confirmar = confirm(
       "Você será direcionado ao Google Maps para visualizar as avaliações da clínica."
@@ -21,12 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.abrirMaps = abrirMaps;
 
-  document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
-  });
-
+  // ✅ animação de sections
   const sections = document.querySelectorAll("section");
 
   const observer = new IntersectionObserver((entries) => {
