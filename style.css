@@ -242,8 +242,8 @@ p {
   border-radius: 12px;
 }
 
-/* STRUCTURE */
-.structure .container {
+/* STRUCTURE (CORRIGIDO) */
+.structure-content {
   display: flex;
   gap: 40px;
   align-items: center;
@@ -255,7 +255,7 @@ p {
   object-fit: cover;
 }
 
-.structure h3 {
+.structure-text {
   flex: 1;
 }
 
